@@ -46,3 +46,11 @@ $('#start').click(function() {
 	setTurn();
 });
 
+$('.tiles').click(function() {
+	if(playerName1 = '' || playerName2 = '') {
+		alert("Please enter players names!");
+	return;
+	}
+	var row = $(this).index();
+	var column = $(this).index();
+});
