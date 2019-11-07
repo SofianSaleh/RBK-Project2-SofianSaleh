@@ -59,3 +59,23 @@ $('.tiles').click(function() {
 		return;
 	}
 });
+	if(turn === playerName2){
+		count++
+		$(this).text('X');
+		grid[row][column] = 1;
+		var checkWinner = winnerCheck(1,playerName2);
+		if(!checkWinner) {
+			if(count >= 9) {
+				printMsg('Match is drawn');
+				count = 0;
+				winner = 1;
+				return;
+		}else {
+				turn = playerName2;
+				printMsg(playerName2 + "'s turn'");
+		}
+			return;
+	}else {
+			return;
+	}
+}

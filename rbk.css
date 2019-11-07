@@ -1,16 +1,11 @@
-
-li{
-	border:1px solid black;
-	padding:80px;
-	
-	list-style-type:none;
-	display: inline-grid;
-}
-}
-
-#reset{
-	width: 120px;
-	height: 60px;
-	font-size: 20px;
+#game{
+    width: 450px;
+    height: 455px;
+    margin: 0 auto;
+    background: gray;
+    margin-top: 50px;
+    border-left: 5px solid gray;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
