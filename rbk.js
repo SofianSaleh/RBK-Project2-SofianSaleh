@@ -31,10 +31,18 @@ function clear() {
 		$(this).text('')
 	}).get()
 }
+
 $('#start').click(function() {
-playerName1 = $('inputName1').val();
-	playerName2 = $('inputName2').val();
-if(playerName1 = '' || playerName2 = '') {
-		alert("Please enter players names!");
-		
+	if(winner === 1) {
+		clear();
 	}
+	playerName1 = $('inputName1').val();
+	playerName2 = $('inputName2').val();
+
+	if(playerName1 = '' || playerName2 = '') {
+		alert("Please enter players names!");
+		return;
+	}
+	setTurn();
+});
+
