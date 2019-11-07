@@ -21,7 +21,7 @@ function printMsg(string) {
 	return $('#msg').html(x);
 }
 
-function clear() {
+$('#reset').click(function clear() {
 	turn = '';
 	grid = [[0,0,0],[0,0,0],[0,0,0]]
 	winner = 0;
@@ -29,8 +29,8 @@ function clear() {
 
 	$('.tiles').map(function() {
 		$(this).text('')
-	}).get()
-}
+	}.get()
+});
 
 $('#start').click(function() {
 	if(winner === 1) {
@@ -53,5 +53,9 @@ $('.tiles').click(function() {
 	var column = $(this).index();
 	if(winner >= 1) {
 		alert('Please click play again');
+	}
+	if(grid[row][column] !== 0) {
+		alert('Position is taken, try again')
+		return;
 	}
 });
