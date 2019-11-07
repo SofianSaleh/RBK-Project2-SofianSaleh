@@ -1,11 +1,40 @@
-$('#oneWin').hide()
-$('#twoWin').hide()
-$('#inputName1').hide()
-$('#inputName2').hide()
-$('label').hide()
-$('#multiplayer').on('click',function() {
-	$('#inputName1').show()
-	$('#inputName2').show()
-	$('label').show()
-})
+var PlayerName1 = '';
+var playerName2 = '';
+var turn = '';
+var grid = [[0,0,0],[0,0,0],[0,0,0]]
+var winner = 0;
+var count = 0;
 
+function setTurn() {
+	var random = Math.floor((Math.random()*2)+1);
+	winner = 0;
+	if(r === 1) {
+		turn = playerName2;
+		printMsg(playerName2+ "'s turn now");
+
+	} else {
+		turn = playerName1;
+		printMsg(playerName1+ "'s turn now");
+	}
+}
+function printMsg(string) {
+	return $('#msg').html(x);
+}
+
+function clear() {
+	turn = '';
+	grid = [[0,0,0],[0,0,0],[0,0,0]]
+	winner = 0;
+	count = 0;
+
+	$('.tiles').map(function() {
+		$(this).text('')
+	}).get()
+}
+$('#start').click(function() {
+playerName1 = $('inputName1').val();
+	playerName2 = $('inputName2').val();
+if(playerName1 = '' || playerName2 = '') {
+		alert("Please enter players names!");
+		
+	}
