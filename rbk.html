@@ -8,41 +8,49 @@
 </head>
 <body>
 	<h1>TIC TAC TOE</h1>
-	<!--<ul class="game"> -->
+	<button id="Multiplayer">Multiplayer</button>
+	<br>
+	<label>Player 1: </label>
+	<input id="inputName1" type="text" name="playerOne" placeholder="Player One Name">
+	<label>Player 2: </label>
+	<input id="inputName2" type="text" name="playerTwo" placeholder="Player Two Name">
+	<ul class="game"> 
 		<!-- first column -->
 	<div>
-	<tr>
-		<th id="00">afdf</th>
-		<th id="01">asdf</th>
-		<th id="02">asdf</th>
-	</tr>
+	
+		<li id="a0" data-position="0"></li>
+		<li id="a1" data-position="1"></li>
+		<li id="a2" data-position="2"></li>
+	
 		</div>
 		<!-- second column -->
 		<div>
-	<tr>
-		<th id="10">asdf</th>
-		<th id="11">sadf</th>
-		<th id="12">asdf</th>
-	</tr>
+	
+		<li id="b3" data-position="3"></li>
+		<li id="b4" data-position="4"></li>
+		<li id="b5" data-position="5"></li>
+	
 		</div>
 		<!-- third column -->
 		<div>
-	<tr>
-		<th id="20">asdf</th>
-		<th id="21">asdf</th>
-		<th id="22">asdf</th>
-	</tr>
+	
+		<li id="c6" data-position="6"></li>
+		<li id="c7" data-position="7"></li>
+		<li id="c8" data-position="8"></li>
+	
 		</div>
 	</ul>
+	<div class="button">
 	<button id="reset">RESET GAME</button>
+</div>
 	<div id="msg">
 		<span id="oneWin">Player one wins</span>
 		<span id="twoWin">Player Two wins</span>
 	</div>
 
 	<aside>
-		<span id="x"></span>
-		<span id="y"></span>
+		<span id="x" value="x"></span>
+		<span id="o" value="o"></span>
 
 		<h2>Score</h2>
 		<div id="p1w">Player one</div>
