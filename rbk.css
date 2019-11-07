@@ -1,0 +1,11 @@
+.game{
+	width: 200px;
+	height: 400px;
+
+}
+
+#reset{
+	width: 120px;
+	height: 60px;
+	font-size: 20px;
+}
