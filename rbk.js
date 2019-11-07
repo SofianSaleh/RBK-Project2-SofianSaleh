@@ -41,7 +41,6 @@ $('#start').click(function() {
 
 	if(playerName1 = '' || playerName2 = '') {
 		alert("Please enter players names!");
-		return;
 	}
 	setTurn();
 });
@@ -49,8 +48,10 @@ $('#start').click(function() {
 $('.tiles').click(function() {
 	if(playerName1 = '' || playerName2 = '') {
 		alert("Please enter players names!");
-	return;
 	}
 	var row = $(this).index();
 	var column = $(this).index();
+	if(winner >= 1) {
+		alert('Please click play again');
+	}
 });
