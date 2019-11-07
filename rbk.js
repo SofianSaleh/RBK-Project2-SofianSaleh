@@ -45,6 +45,7 @@ $('#start').click(function() {
 	setTurn();
 });
 
+
 $('.tiles').click(function() {
 	if(playerName1 = '' || playerName2 = '') {
 		alert("Please enter players names!");
@@ -58,7 +59,6 @@ $('.tiles').click(function() {
 		alert('Position is taken, try again')
 		return;
 	}
-});
 	if(turn === playerName2){
 		count++
 		$(this).text('X');
@@ -78,4 +78,56 @@ $('.tiles').click(function() {
 	}else {
 			return;
 	}
+}
+else if(turn === playerName1){
+		count++
+		$(this).text('O');
+		grid[row][column] = 2;
+		var checkWinner = winnerCheck(2,playerName1);
+		//!
+		if(checkWinner) {
+			if(count >= 9) {
+				printMsg('Match is drawn');
+				count = 0;
+				winner = 1;
+				return;
+			}else {
+				turn = playerName1;
+				printMsg(playerName1 + "'s turn'");
+			}
+			return;
+		}else {
+			return;
+		}
+	}
+});
+
+function winnerCheck (n, playerName){
+	if(
+		(grid[0][0] === n && grid[0][1] === n && grid[0][2] === n) ||
+		(grid[1][0] === n && grid[1][1] === n && grid[1][2] === n) ||
+		(grid[2][0] === n && grid[2][1] === n && grid[2][2] === n) ||
+
+		(grid[0][0] === n && grid[1][1] === n && grid[2][2] === n) ||
+		(grid[1][0] === n && grid[1][0] === n && grid[2][0] === n) ||
+		(grid[0][1] === n && grid[1][1] === n && grid[2][1] === n) ||
+
+		(grid[0][2] === n && grid[1][2] === n && grid[2][2] === n) ||
+		(grid[1][0] === n && grid[1][1] === n && grid[1][2] === n) ||
+		(grid[0][2] === n && grid[1][1] === n && grid[2][0] === n) ||
+		) {
+		if(playerName === playerName1){
+		printMsg(playerName + " Won the game!");
+		printMsg(playerName2 + "Is a sore Loser!!");
+		}else {
+			if(playerName === playerName2){
+		printMsg(playerName + " Won the game!");
+		printMsg(playerName1 + "Is a sore Loser!!");
+			}
+		}
+		winner = 1;
+		count = 0;
+		return true;
+	}
+	return false
 }

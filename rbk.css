@@ -25,3 +25,12 @@
     color: white;
     cursor: pointer;
 }
+
+#panel{
+    width: 435px;
+    padding: 10px;
+    margin: 0 auto;
+    background: brown;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
