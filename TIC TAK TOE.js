@@ -1,3 +1,23 @@
+$('#game').hide()
+$('#panel').hide()
+$('#startUp').hide()
+$('h5').hide()
+$('h3').hide()
+$('#start').hide()
+$('#startUp').slideDown(1000)
+$('h5').fadeIn(2000)
+$('h3').fadeIn(3000)
+$('#start').fadeIn(2000)
+
+$('#start').click(function() {
+$('#startUp').slideup(500)
+$('h5').fadeout(1000)
+$('h3').fadeOut(1300)
+$('#start').fadeOut(1400)
+
+})
+
+
 var player1Name="" 
 var player2Name=""
 var turn = "";
