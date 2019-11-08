@@ -104,3 +104,12 @@ background: #323232;
     border-bottom-left-radius: 20px;
     text-align: center;
 }
+
+#para{
+    font-size: 35px;
+    font-weight: bold;
+}
+#para1{
+    font-size: 30px;
+    font-weight: bold;
+}
