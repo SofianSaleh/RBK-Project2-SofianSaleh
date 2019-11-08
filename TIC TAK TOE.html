@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="TIC TAK TOE.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="TIC TAK TOE.css">
 	<title>Tic Tac Toe</title>
 </head>
 
 <body>
-<!-- Modal box -->
+	<!-- Modal box -->
 
-<div id="game">
-	
-	<div class="row">
-		<div class="tile"></div>
-		<div class="tile"></div>
-		<div class="tile"></div>
+	<div id="game">
+
+		<div class="row">
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+		</div>
+
+		<div class="row">
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+		</div>
+
+		<div class="row">
+			<div class="tile"></div>
+			<div class="tile"></div>
+			<div class="tile"></div>
+		</div>
+
 	</div>
 
-	<div class="row">
-		<div class="tile"></div>
-		<div class="tile"></div>
-		<div class="tile"></div>
+	<div id="panel">
+		<input class="inputBox" type="text" id="player1" placeholder="Enter player 1">
+		<input class="inputBox" type="text" id="player2" placeholder="Enter player 2">
+		<center>
+			<button class="popUpBtn  btnGame" id="mainMenu">Main Menu</button>
+			<button class="popUpBtn  btnGame" id="playButton">Start Game</button>
+			<h1 id="board"></h1>
+		</center>
 	</div>
 
-	<div class="row">
-		<div class="tile"></div>
-		<div class="tile"></div>
-		<div class="tile"></div>
+	<div class="startUp" id="startUp1">
+		<h3 class="welcome">Welcome to </h3>
+		<h3 class="welcome">Tic Tac Toe</h3>
+		<button class="popUpBtn" id="start">Let's Go!</button>
+		<br>
+		<button class="popUpBtn" id="about">About</button>
+		<h5>Made by <a href="" target="_blank">Sofian Saleh</a></h5>
 	</div>
 
-</div>
-
-<div id="panel">
-	<input class="inputBox" type="text" id="player1" placeholder="Enter player 1">
-	<input class="inputBox" type="text" id="player2" placeholder="Enter player 2">
-	<center>
-	<button class="popUpBtn  btnGame" id="mainMenu">Main Menu</button>
-	<button class="popUpBtn  btnGame" id="playButton">Start Game</button>
-	<h1 id="board"></h1>
-	</center>
-</div>
-
-<div class="startUp" id="startUp1">
-	<h3 class="welcome">Welcome to </h3>
-	<h3 class="welcome">Tic Tac Toe</h3>
-	<button class="popUpBtn" id="start">Let's Go!</button>
-	<br>
-	<button class="popUpBtn" id="about">About</button>
-	<h5>Made by <a href="" target="_blank">Sofian Saleh</a></h5>		
-</div>
-
-<div class="about">
-	<p id="para">This game is developed for RBK project purpose. made with HTML, CSS, Javascript and Jquery.</p>
-	<br>
-	<p id="para1">How To Play!</p>
-	<ul>
-		<li>Enter your name and your opponent name. Note: YOU CANNOT PLAY UNTIL YOU ENTER BOTH NAMES</li>
-		<li>The computer will pick randomly who will start first</li>
-		<li>It's Tic Tak Toe everybody knows the rules just play</li>
-	</ul>
-	<br>
-	<button class="popUpBtn" id="back">Back</button>
-</div>
+	<div class="about">
+		<p id="para">This game is developed for RBK project purpose. made with HTML, CSS, Javascript and Jquery.</p>
+		<br>
+		<p id="para1">How To Play!</p>
+		<ul>
+			<li>Enter your name and your opponent name. Note: YOU CANNOT PLAY UNTIL YOU ENTER BOTH NAMES</li>
+			<li>The computer will pick randomly who will start first</li>
+			<li>It's Tic Tak Toe everybody knows the rules just play</li>
+		</ul>
+		<br>
+		<button class="popUpBtn" id="back">Back</button>
+	</div>
 
 
-<div id="popUpWindow" class="popWindow">
+	<div id="popUpWindow" class="popWindow">
 
-  <div class="popWindow-content">
-    <span class="close">&times;</span>
-    <p id="msg"></p>
+		<div class="popWindow-content">
+			<span class="close">&times;</span>
+			<p id="msg"></p>
 
-  </div>
+		</div>
 
-</div>
+	</div>
 </body>
 <footer class="footer">ALL RIGHT ARE RESERVED, &copy SOFIAN SALEH</footer>
 <script type="text/javascript" src="TIC TAK TOE.js"></script>
+
 </html>
