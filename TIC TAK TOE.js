@@ -83,12 +83,12 @@ function setTurn() {
 //then we give the turn to player 2
 		turn = player2Name;
 // we send a message telling the players who will start first by invoking the function msg
-		msg(player1Name+"'s turn now!");
+		msg(player2Name+"'s turn now!");
 
 	}else {
 
 		turn = player1Name;
-		msg(player2Name+"'s turn now!");
+		msg(player1Name+"'s turn now!");
 
 	}
 }
@@ -133,11 +133,11 @@ $("#playButton").click(function() {
 //Checks if the input fields are empty or not
 	if(player1Name === "" || player2Name === "") {
 // Triggers a popUp window and changes the display from none to block
-	$('.modal').css('display','block')
+	$('.popWindow').css('display','block')
 // for the close button for the popUp window
 	$('.close').click(function() {
 //hides the popup window
-	$('.modal').css('display','none')
+	$('.popWindow').css('display','none')
 
 	});
 //adds text to the popup window
@@ -157,11 +157,11 @@ $(".tile").click(function() {
 
 	if(player1Name=="" || player2Name=="") {
 
-	$('.modal').css('display','block')
+	$('.popWindow').css('display','block')
 
 	$('.close').click(function() {
 
-	$('.modal').css('display','none')
+	$('.popWindow').css('display','none')
 	
 	});
 
@@ -175,11 +175,11 @@ $(".tile").click(function() {
 // this line is checking if the spot is taken or not if it's one or two then it's taken otherwise 
 	if(grid[row][column] !== 0) {
 
-	$('.modal').css('display','block')
+	$('.popWindow').css('display','block')
 
 	$('.close').click(function() {
 
-	$('.modal').css('display','none')
+	$('.popWindow').css('display','none')
 
 	});
 
@@ -190,11 +190,11 @@ $(".tile").click(function() {
 
 	if(winner === 1) {
 
-	$('.modal').css('display','block')
+	$('.popWindow').css('display','block')
 
 	$('.close').click(function() {
 		
-	$('.modal').css('display','none')
+	$('.popWindow').css('display','none')
 
 	});
 
@@ -217,8 +217,17 @@ $(".tile").click(function() {
 // we enter  the if statement to check if it's a drw or not
 			if(count >= 9) {
 
-				msg("Match Drawn!");
-				count=0;
+				$('.popWindow').css('display','block')
+
+				$('.close').click(function() {
+		
+				$('.popWindow').css('display','none')
+
+				});
+
+				$('#msg').text("Match Drawn!");
+
+				count = 0;
 
 				$("#playButton").text("Play again");
 
@@ -310,11 +319,11 @@ function winnerCheck(n,playerName) {
 
 		if(playerName === player1Name) {
 
-		$('.modal').css('display','block')
+		$('.popWindow').css('display','block')
 
 	$('.close').click(function() {
 		
-	$('.modal').css('display','none')
+	$('.popWindow').css('display','none')
 
 	});
 
@@ -322,11 +331,11 @@ function winnerCheck(n,playerName) {
 
 		}else{
 
-		$('.modal').css('display','block')
+		$('.popWindow').css('display','block')
 
 	$('.close').click(function() {
 		
-	$('.modal').css('display','none')
+	$('.popWindow').css('display','none')
 
 	});
 
