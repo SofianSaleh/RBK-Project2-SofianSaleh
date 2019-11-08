@@ -65,31 +65,31 @@ background: #323232;
 }
 
 .startUp{
-    width: 435px;
+    width: 50%;
     height: 500px;
     padding: 10px;
     margin: 0 auto;
     background: brown;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+     text-align: center;
 
 }
 .welcome{
     font-size: 50px;
-    text-align: center;
+    
 }
-h5{
-    position: absolute; 
-    bottom: 130px;
-    left:470px;
-}
-#start{
-    position: absolute;
-    bottom: 300px;
-    left:600px;  
+
+.popUpBtn{
+    position: relative;
+    margin: 5px;
     width: 150px;
     height:80px;
     background-color: #323232; 
     border-radius: 5px;
     border:none;
 }
+.popUpBtn:hover{
+    background-color: #3e8e41;
+  color: white;
+    }
