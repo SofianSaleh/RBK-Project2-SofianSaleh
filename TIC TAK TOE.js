@@ -100,28 +100,28 @@ function clear() {
 		winner = 0;
 		count = 0;
 }
-// oce the start
+// once the start Game is pressed the function gets invoked 
 $("#playButton").click(function() {
-
+//checking if they already played a game or not
 	if(winner === 1) {
-
+// if he has palyed then we invoke the function clear to start again
 		clear();
 	}
-
+// putting player names value in a variable
 	player1Name = $("#player1").val();
 	player2Name = $("#player2").val();
-
+//Checks if the input fields are empty or not
 	if(player1Name === "" || player2Name === "") {
 
 		alert("Please set player all the names.");
 
 		return;
 	}
-
+//if the pass the first if statement then we invoke the randomize turn function
 	setTurn();
 
 });
-
+//once you click on a tile this function gets invoked
 $(".tile").click(function() {
 
 	if(player1Name=="" || player2Name=="") {
@@ -130,35 +130,36 @@ $(".tile").click(function() {
 
 		return;
 	}
-
+//assigning the values of the row and column .index() to get the index of a tile .parent() to get the index of the parent
 	var row = $(this).parent().index();
 	var column = $(this).index();
-
+// this line is checking if the spot is taken or not if it's one or two then it's taken otherwise 
 	if(grid[row][column] !== 0) {
 
 		alert("This position is taken. Please try other position.");
 
 		return;
 	}
+
 	if(winner === 1) {
 
 		alert("Please click play again");
 
 		return;
 	}
-
-	if(turn==player1Name) {
-
+//this checks if it is player one's turn
+	if(turn === player1Name) {
+//we increment the count by 1/9
 		count++;
-
+//we assign player one to O 
 		$(this).text("O");
-
+//This is an important move so we make this position not avaliable after the player pressed on the tile
 		grid[row][column] = 1;
-
+// we check if this is the winning move or not by invoking a function that returns true or false
 		var Won = winnerCheck(1,player1Name);
-
+//if it return false
 		if(!Won) {
-
+// we enter  the if statement to check if it's a drw or not
 			if(count >= 9) {
 
 				msg("Match Drawn!");
@@ -169,7 +170,7 @@ $(".tile").click(function() {
 				winner = 1;
 
 				return;
-
+//otherwise we pass the turn to the second player
 			}else{
 
 				turn = player2Name;
@@ -230,7 +231,10 @@ $(".tile").click(function() {
 
 });
 
-function winnerCheck(n,playerName){
+//this function check if the player made the winning move or not
+
+function winnerCheck(n,playerName) {
+
 	if(
 
 		(grid[0][0]==n && grid[0][1]==n && grid[0][2]==n) ||
@@ -245,14 +249,15 @@ function winnerCheck(n,playerName){
 		(grid[0][2]==n && grid[1][1]==n && grid[2][0]==n)
 
 
-		){
+		) {
+
 		if(playerName === player1Name) {
 
-		msg(playerName+" won the game!" + "\n" + player2Name + " is a sore loser!!");
+		msg(playerName + " won the game!");
 
 		}else{
 
-		msg(playerName+" won the game!" + "\n" + player1Name + " is a sore loser!!");
+		msg(playerName + " won the game!");
 		}
 
 		winner = 1;
