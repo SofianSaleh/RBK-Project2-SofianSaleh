@@ -248,12 +248,6 @@ $(".tile").click(function() {
 			return;
 
 		}
-
-		else{
-
-			return;
-
-		}
 		
 	}
 	else if(turn === player2Name) {
@@ -288,9 +282,6 @@ $(".tile").click(function() {
 
 			}
 			return;	
-		}
-		else{
-			return;
 		}
 		
 	}
