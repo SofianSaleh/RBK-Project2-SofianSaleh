@@ -83,6 +83,8 @@ function setTurn() {
 }
 // function msg which gives the messages that we want the players to see by adding text to the div we already have some text
 function msg(x) {
+
+
 	return $("#board").text(x);
 }
 //This function is used when we want to reset the game or after the end of a game
@@ -113,7 +115,15 @@ $("#playButton").click(function() {
 //Checks if the input fields are empty or not
 	if(player1Name === "" || player2Name === "") {
 
-		alert("Please set player all the names.");
+		$('.modal').css('display','block')
+
+	$('.close').click(function() {
+		
+	$('.modal').css('display','none')
+
+	});
+
+	$('#msg').text("Please set player all the names.");
 
 		return;
 	}
@@ -126,8 +136,16 @@ $(".tile").click(function() {
 
 	if(player1Name=="" || player2Name=="") {
 
-		alert("Please set player all the names.");
+	$('.modal').css('display','block')
 
+	$('.close').click(function() {
+
+	$('.modal').css('display','none')
+	
+	});
+
+	$('#msg').text("Please set player all the names.");
+	
 		return;
 	}
 //assigning the values of the row and column .index() to get the index of a tile .parent() to get the index of the parent
@@ -136,14 +154,30 @@ $(".tile").click(function() {
 // this line is checking if the spot is taken or not if it's one or two then it's taken otherwise 
 	if(grid[row][column] !== 0) {
 
-		alert("This position is taken. Please try other position.");
+	$('.modal').css('display','block')
+
+	$('.close').click(function() {
+
+	$('.modal').css('display','none')
+
+	});
+
+	$('#msg').text("This position is taken. Please try other position.");
 
 		return;
 	}
 
 	if(winner === 1) {
 
-		alert("Please click play again");
+	$('.modal').css('display','block')
+
+	$('.close').click(function() {
+		
+	$('.modal').css('display','none')
+
+	});
+
+	$('#msg').text("Please click play again");
 
 		return;
 	}
@@ -253,11 +287,28 @@ function winnerCheck(n,playerName) {
 
 		if(playerName === player1Name) {
 
-		msg(playerName + " won the game!");
+		$('.modal').css('display','block')
+
+	$('.close').click(function() {
+		
+	$('.modal').css('display','none')
+
+	});
+
+	$('#msg').text(playerName + " won the game!");
 
 		}else{
 
-		msg(playerName + " won the game!");
+		$('.modal').css('display','block')
+
+	$('.close').click(function() {
+		
+	$('.modal').css('display','none')
+
+	});
+
+	$('#msg').text(playerName + " won the game!" )
+
 		}
 
 		winner = 1;
@@ -272,4 +323,3 @@ function winnerCheck(n,playerName) {
 }
 
 }
-
