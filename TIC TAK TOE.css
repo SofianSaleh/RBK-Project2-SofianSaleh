@@ -56,6 +56,7 @@ background: #323232;
     background: brown;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+
 }
 #board{
     font-size: 30px;
@@ -82,13 +83,13 @@ background: #323232;
 
 .popUpBtn{
     position: relative;
-    margin: 5px;
+    margin: 10px;
     width: 150px;
     height:80px;
     background-color: #323232; 
     border-radius: 5px;
-    border:none;
-    font-size: 30px;
+    border: none;
+    font-size: 25px;
     font-family: Times-New-Roman;
 }
 .popUpBtn:hover{
@@ -116,3 +117,22 @@ background: #323232;
     font-size: 30px;
     font-weight: bold;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #22294040;
+}
+
+.inputBox{
+      width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
