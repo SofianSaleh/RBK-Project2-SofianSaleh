@@ -75,6 +75,7 @@ background-image: linear-gradient(to right, rgb(50, 50, 50), rgb(77, 77, 77));
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     text-align: center;
+    text-shadow: #000000 0 0 10px;
 
 }
 .welcome{
@@ -94,11 +95,13 @@ background-image: linear-gradient(to right, rgb(50, 50, 50), rgb(77, 77, 77));
     font-size: 25px;
     font-family: Times-New-Roman;
     color: white;
+    transition: 0.3s all ease-in;
 }
 .popUpBtn:hover{
     background-color: #323202;
     color: white;
     font-weight: bold;
+    box-shadow: 0 5px 30px rgba(0,0,0, .4);
 }
 
 .about{
@@ -190,4 +193,7 @@ footer{
     position: absolute; 
     bottom: 0;
     color: white;
+}
+#start{
+text-shadow: #ffffff 0 0 10px;
 }
