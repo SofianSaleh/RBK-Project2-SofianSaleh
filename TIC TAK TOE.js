@@ -169,6 +169,8 @@ $(".tile").click(function() {
 	
 		return;
 	}
+
+
 //assigning the values of the row and column .index() to get the index of a tile .parent() to get the index of the parent
 	var row = $(this).parent().index();
 	var column = $(this).index();
@@ -214,7 +216,7 @@ $(".tile").click(function() {
 		var Won = winnerCheck(1,player1Name);
 //if it return false
 		if(!Won) {
-// we enter  the if statement to check if it's a drw or not
+// we enter  the if statement to check if it's a draw or not
 			if(count >= 9) {
 
 				$('.popWindow').css('display','block')
