@@ -69,10 +69,10 @@ background: #323232;
     height: 500px;
     padding: 10px;
     margin: 0 auto;
-    background: brown;
+    background: #a52a2a;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-     text-align: center;
+    text-align: center;
 
 }
 .welcome{
@@ -90,6 +90,17 @@ background: #323232;
     border:none;
 }
 .popUpBtn:hover{
-    background-color: #3e8e41;
-  color: white;
-    }
+    background-color: #323202;
+    color: white;
+}
+
+.about{
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #a52a2a;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+}

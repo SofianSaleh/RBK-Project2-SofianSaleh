@@ -1,21 +1,30 @@
+function one(){
 $('#game').hide()
 $('#panel').hide()
-$('#startUp').hide()
+$('.startUp').hide()
+$('.popUpBtn').hide()
 $('h5').hide()
-$('h3').hide()
-$('#start').hide()
-$('#startUp').slideDown(1000)
-$('h5').fadeIn(2000)
-$('h3').fadeIn(3000)
-$('#start').fadeIn(2000)
+$('.about').hide()
+$('.startUp').slideDown(1000)
+$('.popUpBtn').fadeIn(2000)
+$('h5').fadeIn(3000)
+}
+one()
+$('#start').on('click', function() {
+$('.startUp').slideUp(1000)
 
-$('#start').click(function() {
-$('#startUp').slideup(500)
-$('h5').fadeout(1000)
-$('h3').fadeOut(1300)
-$('#start').fadeOut(1400)
+$('#game').fadeIn(3000)
+$('#panel').fadeIn(3000)
 
-})
+
+});
+
+$('#about').on('click', function() {
+$('.startUp').slideUp(1000)
+
+$('.about').slideDown(3000)
+
+});
 
 
 var player1Name="" 
