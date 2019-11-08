@@ -11,8 +11,11 @@ $('.startUp').slideDown(1000);
 $('.popUpBtn').fadeIn(2000);
 $('h5').fadeIn(3000)
 };
+
+
 //Invoking the function so it works 
 one()
+
 //once the button with the id (start) is clicked it will invoke a function
 $('#start').on('click', function() {
 //These three lines work on changing the page from the main menu to the game interface
@@ -21,6 +24,8 @@ $('#game').slideDown(2000);
 $('#panel').slideDown(2000);
 
 });
+
+
 //once the button with the id (about) is clicked it will invoke a function
 $('#about').on('click', function() {
 //These two lines work on changing the page from the main menu to the about page
@@ -28,6 +33,8 @@ $('.startUp').slideUp(1000);
 $('.about').slideDown(3000);
 
 });
+
+
 //once the button with the id (back) is clicked it will invoke a function
 $('#back').on('click', function() {
 //These two lines work on changing the page from the about page to the main menu
@@ -35,6 +42,8 @@ $('.about').slideUp(1000);
 $('.startUp').slideDown(3000);
 
 });
+
+
 //once the button with the id (back) is clicked it will invoke a function
 $('#mainMenu').click(function() {
 //These three lines work on changing the page from the game interface page to the main menu
@@ -42,7 +51,9 @@ $('#game').fadeOut(1000);
 $('#panel').fadeOut(1000);
 $('.startUp').fadeIn(2000);
 
-})
+});
+
+
 
 //Now the main functions 
 //first we start by invoking the main function which has a multiple functions nested inside of it
@@ -81,12 +92,16 @@ function setTurn() {
 
 	}
 }
+
+
+
 // function msg which gives the messages that we want the players to see by adding text to the div we already have some text
 function msg(x) {
-
-
 	return $("#board").text(x);
 }
+
+
+
 //This function is used when we want to reset the game or after the end of a game
 function clear() {
 
@@ -102,6 +117,9 @@ function clear() {
 		winner = 0;
 		count = 0;
 }
+
+
+
 // once the start Game is pressed the function gets invoked 
 $("#playButton").click(function() {
 //checking if they already played a game or not
@@ -114,16 +132,16 @@ $("#playButton").click(function() {
 	player2Name = $("#player2").val();
 //Checks if the input fields are empty or not
 	if(player1Name === "" || player2Name === "") {
-
-		$('.modal').css('display','block')
-
+// Triggers a popUp window and changes the display from none to block
+	$('.modal').css('display','block')
+// for the close button for the popUp window
 	$('.close').click(function() {
-		
+//hides the popup window
 	$('.modal').css('display','none')
 
 	});
-
-	$('#msg').text("Please set player all the names.");
+//adds text to the popup window
+	$('#msg').text("Please set all players names.");
 
 		return;
 	}
@@ -131,6 +149,9 @@ $("#playButton").click(function() {
 	setTurn();
 
 });
+
+
+
 //once you click on a tile this function gets invoked
 $(".tile").click(function() {
 
@@ -265,6 +286,8 @@ $(".tile").click(function() {
 
 });
 
+
+
 //this function check if the player made the winning move or not
 
 function winnerCheck(n,playerName) {
@@ -321,5 +344,6 @@ function winnerCheck(n,playerName) {
 
 	return false;
 }
-
 }
+
+

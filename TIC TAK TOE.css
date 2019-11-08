@@ -173,3 +173,13 @@ a:hover{
   text-decoration: none;
   cursor: pointer;
 }
+#msg{
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+}
+footer{
+    position: absolute; 
+    bottom: 0;
+    color: white;
+}
