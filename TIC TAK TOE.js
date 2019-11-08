@@ -155,7 +155,7 @@ $("#playButton").click(function() {
 //once you click on a tile this function gets invoked
 $(".tile").click(function() {
 
-	if(player1Name=="" || player2Name=="") {
+	if(player1Name === "" || player2Name === "") {
 
 	$('.popWindow').css('display','block')
 
