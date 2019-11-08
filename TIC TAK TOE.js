@@ -165,7 +165,7 @@ $(".tile").click(function() {
 	
 	});
 
-	$('#msg').text("Please set player all the names.");
+	$('#msg').text("Please set all players names.");
 	
 		return;
 	}
