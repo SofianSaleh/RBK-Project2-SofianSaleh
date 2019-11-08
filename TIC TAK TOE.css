@@ -24,7 +24,7 @@ background: #323232;
     float: left;
     text-align: center;
     font-size: 150px;
-    font-family: helvetica;
+    font-family: Times-New-Roman;
     color: white;
     cursor: pointer;
 }
@@ -88,10 +88,13 @@ background: #323232;
     background-color: #323232; 
     border-radius: 5px;
     border:none;
+    font-size: 30px;
+    font-family: Times-New-Roman;
 }
 .popUpBtn:hover{
     background-color: #323202;
     color: white;
+    font-weight: bold;
 }
 
 .about{

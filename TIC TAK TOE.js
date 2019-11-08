@@ -10,23 +10,24 @@ $('.popUpBtn').fadeIn(2000)
 $('h5').fadeIn(3000)
 }
 one()
-$('#start').on('click', function() {
-$('.startUp').slideUp(1000)
 
+$('#start').on('click', function() {
+
+$('.startUp').slideUp(1000)
 $('#game').slideDown(3000)
 $('#panel').slideDown(3000)
-
 
 });
 
 $('#about').on('click', function() {
-$('.startUp').slideUp(1000)
 
+$('.startUp').slideUp(1000)
 $('.about').slideDown(3000)
 
 });
 
 $('#back').on('click', function() {
+
 $('.about').slideUp(1000)
 $('.startUp').slideDown(3000)
 
@@ -182,3 +183,4 @@ function winnerCheck(n,playerName){
 	}
 	return false;
 }
+
