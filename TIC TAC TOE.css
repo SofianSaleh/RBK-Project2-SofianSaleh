@@ -1,0 +1,199 @@
+body{
+background: #323232;
+background-image: linear-gradient(to right, rgb(50, 50, 50), rgb(77, 77, 77));
+}
+
+#game{
+    width: 450px;
+    height: 455px;
+    margin: 0 auto;
+    background: gray;
+    margin-top: 50px;
+    border-left: 5px solid gray;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.row{
+    width: 100%;
+    height: 150px;
+}
+.tile{
+    width: 32%;
+    height: 145.5px;
+    border: 3px solid white;
+    float: left;
+    text-align: center;
+    font-size: 150px;
+    font-family: Times-New-Roman;
+    color: white;
+    cursor: pointer;
+}
+.matched{
+    color: maroon;
+}
+.player-1-color{
+    color: maroon;
+}
+.tile:nth-child(1){
+    border-left: none;
+}
+.tile:nth-child(3){
+    border-right: none;
+}
+
+.row:nth-child(1) .col{
+    border-top: none;
+    margin-top: 3px;
+}
+.row:nth-child(3) .col{
+    border-bottom: none;
+    margin-bottom: 3px;
+}
+#panel{
+    width: 435px;
+    padding: 10px;
+    margin: 0 auto;
+    background: brown;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+#board{
+    font-size: 30px;
+    font-family: Times-New-Roman;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+
+.startUp{
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #a52a2a;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    text-shadow: #000000 0 0 10px;
+
+}
+.welcome{
+    font-size: 50px;
+    color: white;
+    
+}
+
+.popUpBtn{
+    position: relative;
+    margin: 10px;
+    width: 150px;
+    height:80px;
+    background-color: #323232; 
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    font-family: Times-New-Roman;
+    color: white;
+    transition: 0.3s all ease-in;
+}
+.popUpBtn:hover{
+    background-color: #323202;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 30px rgba(0,0,0, .4);
+}
+
+.about{
+    width: 50%;
+    height: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    background: #a52a2a;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+#para{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+#para1{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #22294040;
+}
+
+.inputBox{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Times-New-Roman;
+  font-weight: bold;
+}
+
+
+.popWindow {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.popWindow-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#msg{
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+}
+footer{
+    position: absolute; 
+    bottom: 0;
+    color: white;
+}
+#start{
+text-shadow: #ffffff 0 0 10px;
+}
